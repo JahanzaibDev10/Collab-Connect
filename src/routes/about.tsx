@@ -25,59 +25,68 @@ function AboutPage() {
   return (
     <>
       <section className="pt-16 pb-16 md:pt-24 md:pb-20">
-        <div className="container-90 grid lg:grid-cols-2 gap-10 items-stretch">
-          <SectionReveal className="flex flex-col justify-center py-6">
-            <span className="eyebrow">About</span>
-            <h1 className="mt-5 text-5xl md:text-7xl tracking-[-0.03em] leading-[1.02]">
-              Clarity is a craft.
-            </h1>
-            <p className="mt-6 text-foreground/75 leading-relaxed max-w-xl">
-              CollabConnect AB — formerly The Social Vault AB — evolved to focus on what we kept
-              being asked for: operational excellence and cross-functional delivery for growing
-              businesses across Scandinavia and beyond.
-            </p>
-          </SectionReveal>
-          <SectionReveal className="flex" delay={0.1}>
-            <div className="rounded-3xl overflow-hidden bg-surface w-full" style={{ minHeight: '100%' }}>
-              <img src={malmo} alt="Malmö, Sweden" loading="lazy" className="w-full h-full object-cover" />
-            </div>
-          </SectionReveal>
+        <div className="container-90">
+          <div className="grid lg:grid-cols-2 gap-10" style={{ minHeight: '380px' }}>
+            <SectionReveal className="flex flex-col justify-center py-4">
+              <span className="eyebrow">About</span>
+              <h1 className="mt-5 text-5xl md:text-7xl tracking-[-0.03em] leading-[1.02]">
+                Clarity is a craft.
+              </h1>
+              <p className="mt-6 text-foreground/75 leading-relaxed max-w-xl">
+                CollabConnect AB — formerly The Social Vault AB — evolved to focus on what we kept
+                being asked for: operational excellence and cross-functional delivery for growing
+                businesses across Scandinavia and beyond.
+              </p>
+            </SectionReveal>
+            <SectionReveal className="flex" delay={0.1}>
+              <div className="rounded-3xl overflow-hidden w-full h-full">
+                <img src={malmo} alt="Malmö, Sweden" loading="lazy" className="w-full h-full object-cover" style={{ minHeight: '280px' }} />
+              </div>
+            </SectionReveal>
+          </div>
         </div>
       </section>
 
       {/* FOUNDER */}
       <section className="py-16 md:py-24 bg-surface">
-        <div className="container-90 grid lg:grid-cols-2 gap-10 items-stretch">
-          <SectionReveal className="flex">
-            <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.9, ease: [0.2, 0.8, 0.2, 1] }}
-              className="rounded-3xl overflow-hidden bg-card w-full flex items-center justify-center"
-            >
-              <img src={bianca} alt="Bianca Anghelescu, COO of CollabConnect AB" className="w-full h-full object-contain object-center" style={{ maxHeight: '480px' }} />
-            </motion.div>
-          </SectionReveal>
-          <SectionReveal className="flex flex-col justify-center" delay={0.1}>
-            <span className="eyebrow">Founder · COO</span>
-            <h2 className="mt-4 text-4xl md:text-5xl leading-[1.05]">Bianca Anghelescu</h2>
-            <div className="mt-2 text-muted-foreground text-sm">Lund University · 10+ years operations leadership</div>
-            <div className="mt-5 space-y-4 text-foreground/80 leading-relaxed max-w-2xl">
-              <p>Bianca leads operations at CollabConnect AB across teams, workflows, partnerships and delivery. Her focus is on improving execution, strengthening processes, aligning cross-functional teams, and making sure projects move forward with quality and consistency.</p>
-              <p>Her experience spans operations, project coordination, stakeholder management, investor relations, executive support and business growth. She’s helped scale teams, improve internal systems, manage high-priority initiatives, and communicate clearly across leadership, investors, partners and internal teams.</p>
-              <p>She’s especially strong in fast-moving environments where priorities change quickly, details matter, and teams need practical systems that make execution smoother. She enjoys turning complexity into clear processes, building accountability, and helping people work better together.</p>
-            </div>
-            <div>
-              <a
-                href="https://linkedin.com/in/bianca-anghelescu-927b61106/"
-                target="_blank" rel="noreferrer"
-                className="mt-6 inline-flex items-center gap-2 text-sm text-ink link-underline"
+        <div className="container-90">
+          <div className="grid lg:grid-cols-2 gap-10" style={{ minHeight: '460px' }}>
+            <SectionReveal className="flex">
+              <motion.div
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.9, ease: [0.2, 0.8, 0.2, 1] }}
+                className="rounded-3xl overflow-hidden bg-card w-full flex items-center justify-center"
               >
-                <Linkedin className="size-4" /> Connect on LinkedIn
-              </a>
-            </div>
-          </SectionReveal>
+                <img
+                  src={bianca}
+                  alt="Bianca Anghelescu, COO of CollabConnect AB"
+                  className="w-full h-full object-contain object-top"
+                  style={{ maxHeight: '460px' }}
+                />
+              </motion.div>
+            </SectionReveal>
+            <SectionReveal className="flex flex-col justify-center" delay={0.1}>
+              <span className="eyebrow">Founder · COO</span>
+              <h2 className="mt-4 text-4xl md:text-5xl leading-[1.05]">Bianca Anghelescu</h2>
+              <div className="mt-2 text-muted-foreground text-sm">Lund University · 10+ years operations leadership</div>
+              <div className="mt-5 space-y-4 text-foreground/80 leading-relaxed max-w-2xl">
+                <p>Bianca leads operations at CollabConnect AB across teams, workflows, partnerships and delivery. Her focus is on improving execution, strengthening processes, aligning cross-functional teams, and making sure projects move forward with quality and consistency.</p>
+                <p>Her experience spans operations, project coordination, stakeholder management, investor relations, executive support and business growth. She’s helped scale teams, improve internal systems, manage high-priority initiatives, and communicate clearly across leadership, investors, partners and internal teams.</p>
+                <p>She’s especially strong in fast-moving environments where priorities change quickly, details matter, and teams need practical systems that make execution smoother. She enjoys turning complexity into clear processes, building accountability, and helping people work better together.</p>
+              </div>
+              <div>
+                <a
+                  href="https://linkedin.com/in/bianca-anghelescu-927b61106/"
+                  target="_blank" rel="noreferrer"
+                  className="mt-6 inline-flex items-center gap-2 text-sm text-ink link-underline"
+                >
+                  <Linkedin className="size-4" /> Connect on LinkedIn
+                </a>
+              </div>
+            </SectionReveal>
+          </div>
         </div>
       </section>
 

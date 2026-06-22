@@ -211,36 +211,43 @@ function Home() {
 
       {/* ABOUT TEASER */}
       <section className="py-20 md:py-28">
-        <div className="container-90 grid lg:grid-cols-2 gap-10 items-stretch">
-          <SectionReveal className="flex">
-            <motion.div
-              whileInView={{ scale: 1 }} initial={{ scale: 1.05 }}
-              transition={{ duration: 1.2, ease: [0.2, 0.8, 0.2, 1] }}
-              viewport={{ once: true }}
-              className="relative rounded-3xl overflow-hidden bg-surface w-full flex items-center justify-center"
-            >
-              <img src={bianca} alt="Bianca Anghelescu, COO of CollabConnect AB" className="w-full h-full object-contain object-center" style={{ maxHeight: '420px' }} />
-              <div className="absolute inset-x-0 bottom-0 p-4 text-white bg-gradient-to-t from-ink/80 to-transparent">
-                <div className="text-sm">Bianca Anghelescu</div>
-                <div className="text-xs text-white/75">COO · Lund University · 10+ yrs</div>
+        <div className="container-90">
+          <div className="grid lg:grid-cols-2 gap-10" style={{ minHeight: '420px' }}>
+            <SectionReveal className="flex">
+              <motion.div
+                whileInView={{ scale: 1 }} initial={{ scale: 1.05 }}
+                transition={{ duration: 1.2, ease: [0.2, 0.8, 0.2, 1] }}
+                viewport={{ once: true }}
+                className="relative rounded-3xl overflow-hidden bg-surface w-full flex items-center justify-center"
+              >
+                <img
+                  src={bianca}
+                  alt="Bianca Anghelescu, COO of CollabConnect AB"
+                  className="w-full h-full object-contain object-top"
+                  style={{ maxHeight: '420px' }}
+                />
+                <div className="absolute inset-x-0 bottom-0 p-4 text-white bg-gradient-to-t from-ink/80 to-transparent">
+                  <div className="text-sm">Bianca Anghelescu</div>
+                  <div className="text-xs text-white/75">COO · Lund University · 10+ yrs</div>
+                </div>
+              </motion.div>
+            </SectionReveal>
+            <SectionReveal className="flex flex-col justify-center" delay={0.1}>
+              <span className="eyebrow">The operator</span>
+              <h2 className="mt-4 text-4xl md:text-5xl leading-[1.05]">
+                Calm authority for fast-moving teams.
+              </h2>
+              <p className="mt-5 text-foreground/75 leading-relaxed max-w-xl">
+                Bianca has spent 10+ years bringing structure, clarity and momentum to complex work —
+                across operations, project coordination, stakeholder management, investor relations and
+                executive support. She's especially strong where priorities change quickly, details matter,
+                and teams need practical systems that make execution smoother.
+              </p>
+              <div className="mt-7">
+                <CTAButton variant="outline" onClick={() => navigate({ to: '/about' })}>More about Bianca</CTAButton>
               </div>
-            </motion.div>
-          </SectionReveal>
-          <SectionReveal className="flex flex-col justify-center" delay={0.1}>
-            <span className="eyebrow">The operator</span>
-            <h2 className="mt-4 text-4xl md:text-5xl leading-[1.05]">
-              Calm authority for fast-moving teams.
-            </h2>
-            <p className="mt-5 text-foreground/75 leading-relaxed max-w-xl">
-              Bianca has spent 10+ years bringing structure, clarity and momentum to complex work —
-              across operations, project coordination, stakeholder management, investor relations and
-              executive support. She's especially strong where priorities change quickly, details matter,
-              and teams need practical systems that make execution smoother.
-            </p>
-            <div className="mt-7">
-              <CTAButton variant="outline" onClick={() => navigate({ to: '/about' })}>More about Bianca</CTAButton>
-            </div>
-          </SectionReveal>
+            </SectionReveal>
+          </div>
         </div>
       </section>
 
